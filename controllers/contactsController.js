@@ -30,7 +30,7 @@ const addContact = async (req, res) => {
   if (response.acknowledged) {
     res.status(201).json(response);
   } else {
-    res.status(500).json(response.error || 'an error occurred while creating the contact.');
+    res.status(500).json(response.error || 'Error occurred while creating contact.');
   }
 };
 
@@ -52,7 +52,7 @@ const updateContact = async (req, res) => {
   if (response.modifiedCount > 0) {
     res.status(204).send();
   } else {
-    res.status(500).json(response.error || 'Some error occurred while updating the contact.');
+    res.status(500).json(response.error || 'Error occurred while updating contact.');
   }
 };
 
@@ -65,7 +65,7 @@ const deleteContact = async (req, res) => {
     .deleteOne({ _id: userId }, true);
   console.log(response);
   if (response.deletedCount > 0) {
-    res.status(204).send();
+    res.status(200).send();
   } else {
     res.status(500).json(response.error || 'Some error occurred while deleting the contact.');
   }
