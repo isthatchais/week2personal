@@ -11,6 +11,10 @@ Content-Type: application/json
 }
 ###
 
+### Local host get all contacts
+GET http://localhost:8080/contacts
+###
+
 ###local host update contact
 PUT http://localhost:8080/contacts/updateContact/65b585bd6ddc914a35ebcb45
 Content-Type: application/json
@@ -19,10 +23,15 @@ Content-Type: application/json
     "firstName": "Gracey",
     "lastName": "Chang",
     "email": "sweet@girl.com",
-    "favoriteColor": "Gray",
+    "favoriteColor": "Purple",
     "birthday": "1/26/24"
 }
 ###
+
+### Local host get all contacts
+GET http://localhost:8080/contacts
+###
+
 
 ###local host delete contact
 DELETE http://localhost:8080/contacts/deleteContact/65b5819bf9cad2ed61d7a0e7
@@ -35,6 +44,51 @@ GET http://localhost:8080/contacts
 
 
 
+###render add contact
+POST https://cse341byuiweek2.onrender.com/contacts/addContact
+Content-Type: application/json
+
+{
+    "firstName": "Alex",
+    "lastName": "Chang",
+    "email": "great@student.com",
+    "favoriteColor": "Purple",
+    "birthday": "1/19/24"
+}
+###
+
+### render get all contacts
+GEt https://cse341byuiweek2.onrender.com/contacts
+###
+
+###render update contact
+PUT https://cse341byuiweek2.onrender.com/contacts/updateContact/65b585bd6ddc914a35ebcb45
+Content-Type: application/json
+
+{
+    "firstName": "Gracey",
+    "lastName": "Chang",
+    "email": "gracey@sweetgirl.com",
+    "favoriteColor": "Gray",
+    "birthday": "1/24/24"
+}
+###
+
+### render get all contacts
+GEt https://cse341byuiweek2.onrender.com/contacts
+###
+
+### render delete contact
+DELETE  https://cse341byuiweek2.onrender.com/contacts/deleteContact/65b5922f6aec89a571468a73
+###
+
+
+
+
+
+
+###old stuff get by id local and on render
+
 
 ### local host get contacts by id
 GET http://localhost:8080/contacts/65b5855a6ddc914a35ebcb43
@@ -46,11 +100,6 @@ GET http://localhost:8080/contacts/65b5859c6ddc914a35ebcb44
 GET http://localhost:8080/contacts/65b585bd6ddc914a35ebcb45
 ###
 
-GET http://localhost:8080/contacts/65b5819bf9cad2ed61d7a0e7
-
-### render get all contacts
-https://cse341byuiweek2.onrender.com/contacts
-###
 
 ### render get contacts by id
 https://cse341byuiweek2.onrender.com/contacts/65b5855a6ddc914a35ebcb43
