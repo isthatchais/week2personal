@@ -1,23 +1,64 @@
+###local host add contact
+POST http://localhost:8080/contacts/addContact
+Content-Type: application/json
+
+{
+    "firstName": "Alex",
+    "lastName": "Chang",
+    "email": "great@student.com",
+    "favoriteColor": "Purple",
+    "birthday": "1/19/24"
+}
+###
+
+###local host update contact
+PUT http://localhost:8080/contacts/updateContact/65b585bd6ddc914a35ebcb45
+Content-Type: application/json
+
+{
+    "firstName": "Gracey",
+    "lastName": "Chang",
+    "email": "sweet@girl.com",
+    "favoriteColor": "Gray",
+    "birthday": "1/26/24"
+}
+###
+
+###local host delete contact
+DELETE http://localhost:8080/contacts/deleteContact/65b5819bf9cad2ed61d7a0e7
+###
+
+### Local host get all contacts
 GET http://localhost:8080/contacts
 ###
 
-GET http://localhost:8080/contacts/65ac0fbcf2a29a7b7572a7a3
+
+
+
+
+### local host get contacts by id
+GET http://localhost:8080/contacts/65b5855a6ddc914a35ebcb43
 ###
 
-GET http://localhost:8080/contacts/65ac0fc3f2a29a7b7572a7a4
+GET http://localhost:8080/contacts/65b5859c6ddc914a35ebcb44
 ###
 
-GET http://localhost:8080/contacts/65ac0fcdf2a29a7b7572a7a5
+GET http://localhost:8080/contacts/65b585bd6ddc914a35ebcb45
 ###
 
-https://cse341byuiweek2.onrender.com/contacts/65ac0fbcf2a29a7b7572a7a3
-###
+GET http://localhost:8080/contacts/65b5819bf9cad2ed61d7a0e7
 
-https://cse341byuiweek2.onrender.com/contacts/65ac0fc3f2a29a7b7572a7a4
-###
-
-https://cse341byuiweek2.onrender.com/contacts/65ac0fcdf2a29a7b7572a7a5
-###
-
+### render get all contacts
 https://cse341byuiweek2.onrender.com/contacts
 ###
+
+### render get contacts by id
+https://cse341byuiweek2.onrender.com/contacts/65b5855a6ddc914a35ebcb43
+###
+
+https://cse341byuiweek2.onrender.com/contacts/65b5859c6ddc914a35ebcb44
+###
+
+https://cse341byuiweek2.onrender.com/contacts/65b585bd6ddc914a35ebcb45
+###
+

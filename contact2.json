@@ -1,10 +1,7 @@
 {
-    "contact2": {
-        "firstName": "Lincoln",
-        "lastName": "Chang",
-        "email": "rad@dude.com",
-        "favoriteColor": "Black",
-        "birthday": "1/19/24"
-    }
-    
+  "firstName": "Lincoln",
+  "lastName": "Chang",
+  "email": "rad@dude.com",
+  "favoriteColor": "Black",
+  "birthday": "1/19/24"
 }

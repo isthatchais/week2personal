@@ -1,9 +1,7 @@
 {
-    "contact1": {
-        "firstName": "Wendy",
-        "lastName": "Chang",
-        "email": "awesome@woman.com",
-        "favoriteColor": "Purple",
-        "birthday": "1/19/24"
-    }
+  "firstName": "Wendy",
+  "lastName": "Chang",
+  "email": "awesome@woman.com",
+  "favoriteColor": "Purple",
+  "birthday": "1/19/24"
 }
