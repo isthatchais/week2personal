@@ -1,4 +1,4 @@
-### Local host get all contacts
+### Local host get api docs
 GET http://localhost:8080/api-docs
 ###
 
