@@ -1,13 +1,13 @@
 ###local host add contact
-POST http://localhost:8080/contacts/addContact
+POST http://localhost:8080/contacts
 Content-Type: application/json
 
 {
-    "firstName": "Alex",
+    "firstName": "Yuki",
     "lastName": "Chang",
-    "email": "great@student.com",
-    "favoriteColor": "Purple",
-    "birthday": "1/19/24"
+    "email": "working@onit.com",
+    "favoriteColor": "Black",
+    "birthday": "1/31/24"
 }
 ###
 
@@ -16,7 +16,7 @@ GET http://localhost:8080/contacts
 ###
 
 ###local host update contact
-PUT http://localhost:8080/contacts/updateContact/65b585bd6ddc914a35ebcb45
+PUT http://localhost:8080/contacts/65b585bd6ddc914a35ebcb45
 Content-Type: application/json
 
 {
@@ -34,7 +34,7 @@ GET http://localhost:8080/contacts
 
 
 ###local host delete contact
-DELETE http://localhost:8080/contacts/deleteContact/65b5819bf9cad2ed61d7a0e7
+DELETE http://localhost:8080/contacts/65b598a516bcc3dfc28d49fb
 ###
 
 ### Local host get all contacts
@@ -79,7 +79,7 @@ GEt https://cse341byuiweek2.onrender.com/contacts
 ###
 
 ### render delete contact
-DELETE  https://cse341byuiweek2.onrender.com/contacts/deleteContact/65b5922f6aec89a571468a73
+DELETE  https://cse341byuiweek2.onrender.com/contacts/deleteContact/65b598fd2f6a200fccc73f37
 ###
 
 
