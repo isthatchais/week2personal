@@ -45,14 +45,14 @@ GET http://localhost:8080/contacts
 
 
 ###render add contact
-POST https://cse341byuiweek2.onrender.com/contacts/addContact
+POST https://cse341byuiweek2.onrender.com/contacts
 Content-Type: application/json
 
 {
-    "firstName": "Alex",
+    "firstName": "Chais",
     "lastName": "Chang",
-    "email": "great@student.com",
-    "favoriteColor": "Purple",
+    "email": "fun@dad.com",
+    "favoriteColor": "Blue",
     "birthday": "1/19/24"
 }
 ###
@@ -62,16 +62,16 @@ GEt https://cse341byuiweek2.onrender.com/contacts
 ###
 
 ###render update contact
-PUT https://cse341byuiweek2.onrender.com/contacts/updateContact/65b585bd6ddc914a35ebcb45
+PUT https://cse341byuiweek2.onrender.com/contacts/65bef6cd5e678db7aa7edf96
 Content-Type: application/json
 
 {
-    "firstName": "Gracey",
+    "firstName": "Charity",
     "lastName": "Chang",
-    "email": "gracey@sweetgirl.com",
-    "favoriteColor": "Gray",
-    "birthday": "1/24/24"
-}
+    "email": "bandkids@rock.com",
+    "favoriteColor": "Green",
+    "birthday": "1/31/24"
+  }
 ###
 
 ### render get all contacts
@@ -79,7 +79,7 @@ GEt https://cse341byuiweek2.onrender.com/contacts
 ###
 
 ### render delete contact
-DELETE  https://cse341byuiweek2.onrender.com/contacts/deleteContact/65b598fd2f6a200fccc73f37
+DELETE  https://cse341byuiweek2.onrender.com/contacts/65b598fd2f6a200fccc73f37
 ###
 
 
