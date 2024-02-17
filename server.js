@@ -7,6 +7,15 @@ const port = process.env.PORT || 8080;
 
 app.use(bodyParser.json());
 
+app
+  .use(bodyParser.json())
+  .use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    next();
+  })
+
+
+/*
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader(
@@ -17,11 +26,12 @@ app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
   next();
 });
+*/
 
 app.use('/', require('./routes'));
 
 process.on('uncaughtException', (err, origin) => {
-  console.log(process.stderr.fd, `Caught exception:  ${err}\n` + `Exception origin: ${origin} `);
+  console.log(process.stderr.fd, `Caught exception: ${err}\n` + `Exception origin: ${origin}`);
 });
 
 mongodb.initDb((err) => {

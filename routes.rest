@@ -39,7 +39,7 @@ GET http://localhost:8080/contacts
 
 
 ###local host delete contact
-DELETE http://localhost:8080/contacts/65befcaa5e678db7aa7edf97
+DELETE http://localhost:8080/contacts/65cedc7512f5a0683dcd267a
 ###
 
 ### Local host get all contacts

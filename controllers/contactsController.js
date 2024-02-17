@@ -3,19 +3,27 @@ const ObjectId = require('mongodb').ObjectId;
 
 const getAllContacts = async (req, res) => {
   const result = await mongodb.getDb().db().collection('contacts').find();
-  result.toArray().then((lists) => {
-    res.setHeader('Content-Type', 'application/json');
-    res.status(200).json(lists);
-  });
+  if (result) {
+    result.toArray().then((lists) => {
+      res.setHeader('Content-Type', 'application/json');
+      res.status(200).json(lists);
+    });
+  } else {
+    res.status(400).json(result.error || 'Error occurred while retreiving contacts.');
+  }
 };
 
 const getOneContact = async (req, res) => {
   const contactId = new ObjectId(req.params.id);
   const result = await mongodb.getDb().db().collection('contacts').find({ _id: contactId });
-  result.toArray().then((lists) => {
-    res.setHeader('Content-Type', 'application/json');
-    res.status(200).json(lists[0]);
-  });
+  if (result) {
+    result.toArray().then((lists) => {
+      res.setHeader('Content-Type', 'application/json');
+      res.status(200).json(lists[0]);
+    });
+  } else {
+    res.status(400).json(result.error || 'Error occurred while retreiving contact.');
+  }
 };
 
 const addContact = async (req, res) => {
@@ -26,7 +34,7 @@ const addContact = async (req, res) => {
     favoriteColor: req.body.favoriteColor,
     birthday: req.body.birthday
   };
-  const response = await mongodb.getDb().db().collection('contacts').insertOne(contact);
+  const response = await mongodb.getDb().db('test').collection('contacts').insertOne(contact);
   if (response.acknowledged) {
     res.status(201).json(response);
   } else {
@@ -45,7 +53,7 @@ const updateContact = async (req, res) => {
   };
   const response = await mongodb
     .getDb()
-    .db()
+    .db('test')
     .collection('contacts')
     .replaceOne({ _id: userId }, contact);
   console.log(response);
@@ -60,7 +68,7 @@ const deleteContact = async (req, res) => {
   const userId = new ObjectId(req.params.id);
   const response = await mongodb
     .getDb()
-    .db()
+    .db('test')
     .collection('contacts')
     .deleteOne({ _id: userId }, true);
   console.log(response);
